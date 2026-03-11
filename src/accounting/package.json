@@ -1,0 +1,25 @@
+{
+  "name": "account-management-system",
+  "version": "1.0.0",
+  "description": "Modernized Node.js implementation of the Student Account Management System (formerly COBOL)",
+  "main": "index.js",
+  "bin": {
+    "account-system": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --inspect index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "accounting",
+    "student-accounts",
+    "modernization",
+    "legacy-code"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
