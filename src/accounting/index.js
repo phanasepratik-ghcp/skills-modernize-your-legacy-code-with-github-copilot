@@ -201,6 +201,16 @@ const MainProgram = {
 };
 
 // ============================================================================
+// EXPORTS FOR TESTING
+// ============================================================================
+
+module.exports = {
+  DataProgram,
+  Operations,
+  MainProgram
+};
+
+// ============================================================================
 // APPLICATION ENTRY POINT
 // ============================================================================
 
@@ -212,8 +222,10 @@ async function main() {
   process.exit(0);
 }
 
-// Run the application
-main().catch((error) => {
-  console.error('Fatal error:', error);
-  process.exit(1);
-});
+// Only run if this file is executed directly (not imported)
+if (require.main === module) {
+  main().catch((error) => {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  });
+}
